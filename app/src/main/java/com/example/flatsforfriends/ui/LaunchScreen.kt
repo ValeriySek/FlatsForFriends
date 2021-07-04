@@ -26,7 +26,9 @@ import com.example.flatsforfriends.ui.theme.gradientBlack
 import com.example.flatsforfriends.ui.theme.gradientGreen
 
 @Composable
-fun LaunchScreen() {
+fun LaunchScreen(
+    onClick: () -> Unit
+) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -44,7 +46,7 @@ fun LaunchScreen() {
 
 
             Button(
-                onClick = { /*TODO*/ },
+                onClick = onClick,
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color.Transparent),
                 contentPadding = PaddingValues(),
                 modifier = Modifier
